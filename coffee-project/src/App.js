@@ -1,20 +1,15 @@
-
+import { createGlobalStyle } from 'styled-components';
 import { useState } from 'react';
 import './App.css';
 import { Home } from './Pages/Home/Home';
 import {ProductList} from './components/ProductsList/ProductList'
 import { MainPage } from './Pages/MainPage/MainPage';
 
-// const GlobalStyle = createGlobalStyle`
-//   *{
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-//     font-family: "Inter", sans-serif;
-//     background-color: #f8f9f9;
-  
-//   }
-// `;
+const GlobalStyle = createGlobalStyle`
+  *{
+   font-family: 'Questrial', sans-serif;
+  }
+`;
 
 function App() {
 
@@ -26,6 +21,7 @@ function App() {
     switch(activeScreen){
       case "MainPage":
         return <>
+        <GlobalStyle/>
         <Home/>
         <MainPage/>
 

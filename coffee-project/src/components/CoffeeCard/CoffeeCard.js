@@ -1,6 +1,7 @@
 import React from "react";
-import { Conteiner,Img } from "./CoffeeCard.styles";
-
+import { AddBtn, Conteiner,Description,FavBtn,Img, Name, Price } from "./CoffeeCard.styles";
+import add from "../../assets/add.png"
+import fav from "../../assets/fav.png"
 export const CoffeeCard = (props) => {
 
     console.log(props)
@@ -8,9 +9,14 @@ export const CoffeeCard = (props) => {
 return(
     <Conteiner>
     <Img src={props.products.img} alt="mainPageImg"/>
-    <div>{`R$${props.products.price}`}</div>
-    <div>{props.products.name}</div>
+   
+    <AddBtn src= {add}/>
+    <FavBtn src= {fav}/>
+    <Description>
+    <Name>{props.products.name}</Name>
+    <Price>{`$${props.products.price}`}</Price>
     <div>{props.products.description}</div>
+    </Description>
     </Conteiner>
 )
 
