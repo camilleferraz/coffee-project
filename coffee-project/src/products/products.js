@@ -60,6 +60,13 @@ export const products = [
         description: "Pedras Preciosas",
         price:4.00,
         img:frappe
+    },
+    {
+        id: "007",
+        name: "Frappè",
+        description: "Pedras Preciosas",
+        price:4.00,
+        img:frappe
     }
 
 ]
