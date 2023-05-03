@@ -13,6 +13,15 @@ position: relative;
 
 export const Logo = styled.img`
 width: 10%;
+
+  `;
+
+export const CartIcon = styled.img`
+width: 3%;
+position: absolute;
+right: 20%;
+top:90%;
+cursor: pointer;
   `;
 
 export const HotCategory = styled.img`
