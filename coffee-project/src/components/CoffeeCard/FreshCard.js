@@ -1,23 +1,23 @@
 import React from "react";
-import { AddBtn, Conteiner,Description,FavBtn,Img, Name, Price } from "./CoffeeCard.styles";
+import { AddBtn,Description,FavBtn, Name, Price, FreshContainer,FreshImg } from "./CoffeeCard.styles";
 import add from "../../assets/add.png"
 import fav from "../../assets/fav.png"
 import liked from "../../assets/liked.png"
 import { useState } from "react";
 // import LikeBtn from "../Animation/likeBtn";
 
-export const CoffeeCard = (props) => {
+export const FreshCard = (props) => {
     
-    const {isOnMainPage,products,addToCart} = props
+    const {isOnMainPage,freshProducts,addToCart} = props
     const [isFavorite, setIsFavorite] = useState(false)
 
    
 
 return(
-    <Conteiner>
-    <Img src={props.products.img} alt="mainPageImg"/>
+    <FreshContainer>
+    <FreshImg src={freshProducts.img} alt="mainPageImg"/>
    
-    {isOnMainPage&&<button onClick={()=>addToCart(products)}>
+    {isOnMainPage&&<button onClick={()=>addToCart(freshProducts)}>
         <AddBtn src= {add}/>
         </button>}
     {isFavorite&&<button onClick={()=>setIsFavorite(!isFavorite)}>
@@ -28,11 +28,11 @@ return(
         </button>}
     
     <Description>
-    <Name>{props.products.name}</Name>
-    <Price>{`$${props.products.price}`}</Price>
-    <div>{props.products.description}</div>
+    <Name>{freshProducts.name}</Name>
+    <Price>{`$${freshProducts.price}`}</Price>
+    <div>{freshProducts.description}</div>
     </Description>
-    </Conteiner>
+    </FreshContainer>
 )
 
 }
