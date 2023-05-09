@@ -7,7 +7,10 @@ export const Home = () =>{
     return( 
     <MainContainer>
    <MainImg src={mainImg} alt="mainPageImg"/>
-   <Orderbtn>Order now</Orderbtn>
+   <Orderbtn href="#about" >
+    <p>Order now</p>
+   </Orderbtn>
     </MainContainer>
     )
 }
+

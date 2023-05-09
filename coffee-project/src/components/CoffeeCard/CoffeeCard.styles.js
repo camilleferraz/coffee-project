@@ -17,6 +17,23 @@ export const Conteiner = styled.div`
 }
 `;
 
+export const FreshContainer = styled.div`
+  background-color: #f1e9e1;
+  width: 12rem;
+  height: 10rem;
+  margin: 16px;
+  position: relative;
+  color: #bd956e;
+  transition: 0.4s;
+
+  
+&:hover{
+  background-color: #555C1C;
+  color: #cdb399;
+  transition: 0.4s;
+}
+`;
+
 export const Img = styled.img`
  width: 10rem;
  position: absolute;
@@ -24,6 +41,14 @@ export const Img = styled.img`
  right: 12%;
 
  `;
+
+export const FreshImg = styled.img`
+width: 10rem;
+position: absolute;
+bottom: 2rem;
+right: 12%;
+
+`;
 
 export const AddBtn = styled.img`
  width: 36px;

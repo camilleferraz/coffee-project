@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import { useState } from 'react';
 import './App.css';
 import { Home } from './Pages/Home/Home';
-import {ProductList} from './components/ProductsList/ProductList'
 import { MainPage } from './Pages/MainPage/MainPage';
 import { useEffect } from 'react';
 import { CartPage } from './Pages/CartPage/CartPage';
@@ -14,14 +13,17 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-
+  
+  
   const [activeScreen, setActiveScreen] = useState("MainPage")
   const [cart, setCart] =  useState([])
   const [favorites, setFavorites] = useState([])
 
   const goToMainPage = () => setActiveScreen("MainPage")
   const goToCartPage = () => setActiveScreen("CartPage")
-
+  
+  console.log(cart)
+  
   const renderScreen = () =>{
     switch(activeScreen){
       case "MainPage":
@@ -37,6 +39,7 @@ function App() {
         </>
         case "CartPage":
           return<>
+          <GlobalStyle/>
           <CartPage
       increaseQuantityInCart={increaseQuantityInCart}
       decreaseQuantityInCart={decreaseQuantityInCart}
